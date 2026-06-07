@@ -6,4 +6,54 @@
   body {
     @apply bg-white;
   }
+
+  /* Override browser blue accent color on form elements with the orange theme */
+  input[type="date"],
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    accent-color: #ff6b35;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline-color: #ff6b35;
+  }
+}
+
+/* ─── Override Bootstrap blue defaults for PhysioNova ─── */
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+
+/* Kill Bootstrap's blue focus/shadow on form controls */
+.form-control:focus,
+.form-select:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ff6b35 !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.2) !important;
+}
+
+/* Override Bootstrap button focus glow */
+.btn:focus,
+.btn:active:focus,
+button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.25) !important;
+}
+
+/* Override Bootstrap's default blue link styling */
+.font-poppins a {
+  color: inherit;
+  text-decoration: none;
+}
+.font-poppins a:hover {
+  color: inherit;
 }

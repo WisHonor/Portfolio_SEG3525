@@ -5,8 +5,10 @@ const studies = [
     id: 1,
     badge: 'Design 1',
     title: 'Site de Services',
-    description: 'Bientôt disponible',
+    description: 'PhysioNova — Clinique de physiothérapie',
     image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop',
+    to: '/physionova',
+    live: true,
   },
   {
     id: 2,
@@ -14,6 +16,8 @@ const studies = [
     title: 'Jeu de Mémoire',
     description: 'Bientôt disponible',
     image: 'https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=600&h=400&fit=crop',
+    to: '/case-study/2',
+    live: false,
   },
   {
     id: 3,
@@ -21,6 +25,8 @@ const studies = [
     title: 'Site E-Commerce',
     description: 'Bientôt disponible',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+    to: '/case-study/3',
+    live: false,
   },
   {
     id: 4,
@@ -28,6 +34,8 @@ const studies = [
     title: 'Analyse & Visualisation',
     description: 'Bientôt disponible',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+    to: '/case-study/4',
+    live: false,
   },
 ]
 
@@ -44,7 +52,7 @@ function CaseStudies() {
           {studies.map((study) => (
             <Link
               key={study.id}
-              to={`/case-study/${study.id}`}
+              to={study.to}
               className="block no-underline group"
             >
               <div className="bg-white rounded-xl overflow-hidden border border-gray-100 h-full transition-all group-hover:scale-[1.02] group-hover:shadow-xl shadow-sm">
@@ -56,9 +64,17 @@ function CaseStudies() {
                   />
                 </div>
                 <div className="p-5">
-                  <span className="inline-block bg-orange text-white text-[0.7rem] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full mb-2">
-                    {study.badge}
-                  </span>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="inline-block bg-orange text-white text-[0.7rem] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full">
+                      {study.badge}
+                    </span>
+                    {study.live && (
+                      <span className="inline-flex items-center gap-1 bg-green-100 text-green-700 text-[0.65rem] font-semibold uppercase tracking-wide px-2 py-1 rounded-full">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block"></span>
+                        Live
+                      </span>
+                    )}
+                  </div>
                   <h5 className="text-dark-bg font-semibold text-base mb-1">{study.title}</h5>
                   <p className="text-gray-500 text-sm">{study.description}</p>
                 </div>
