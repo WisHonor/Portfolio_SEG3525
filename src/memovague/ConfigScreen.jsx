@@ -46,8 +46,8 @@ export default function ConfigScreen({ initialLevel, initialTheme, onStart }) {
                 className={
                   'flex items-center justify-between rounded-2xl border-2 px-5 py-4 text-left transition ' +
                   (active
-                    ? 'border-mv-primary bg-mv-primary/5 shadow-sm'
-                    : 'border-mv-neutral/20 bg-white hover:border-mv-primary/40')
+                    ? 'border-mv-primary bg-mv-primary/10 shadow-sm'
+                    : 'border-white/10 bg-mv-surface hover:border-mv-primary/50')
                 }
               >
                 <span>
@@ -59,7 +59,7 @@ export default function ConfigScreen({ initialLevel, initialTheme, onStart }) {
                   {Array.from({ length: lvl.cols * lvl.cols }).map((_, i) => (
                     <span
                       key={i}
-                      className={'h-1.5 w-1.5 rounded-[2px] ' + (active ? 'bg-mv-primary/70' : 'bg-mv-neutral/30')}
+                      className={'h-1.5 w-1.5 rounded-[2px] ' + (active ? 'bg-mv-primary' : 'bg-white/15')}
                     />
                   ))}
                 </span>
@@ -86,8 +86,8 @@ export default function ConfigScreen({ initialLevel, initialTheme, onStart }) {
                 className={
                   'flex flex-col items-center gap-1.5 rounded-2xl border-2 px-3 py-4 transition ' +
                   (active
-                    ? 'border-mv-primary bg-mv-primary/5 shadow-sm'
-                    : 'border-mv-neutral/20 bg-white hover:border-mv-primary/40')
+                    ? 'border-mv-accent bg-mv-primary/10 shadow-sm'
+                    : 'border-white/10 bg-mv-surface hover:border-mv-primary/50')
                 }
               >
                 <span className="text-2xl leading-none">{thm.icon}</span>
@@ -98,12 +98,12 @@ export default function ConfigScreen({ initialLevel, initialTheme, onStart }) {
         </div>
       </fieldset>
 
-      {/* ── ACTION PRIMAIRE : contraste coral + échelle pour la hiérarchiser ── */}
+      {/* ── ACTION PRIMAIRE : or vif + échelle pour la hiérarchiser ── */}
       <div className="mt-10 flex justify-center">
         <button
           type="button"
           onClick={() => onStart(level, theme)}
-          className="rounded-2xl bg-mv-accent px-10 py-4 text-lg font-bold text-white shadow-lg shadow-mv-accent/30 transition hover:-translate-y-0.5 hover:bg-mv-accent-dark active:translate-y-0"
+          className="rounded-2xl bg-mv-accent px-10 py-4 text-lg font-extrabold text-mv-bg shadow-lg shadow-mv-accent/30 transition hover:-translate-y-0.5 hover:bg-mv-accent-dark active:translate-y-0"
         >
           Commencer&nbsp;→
         </button>

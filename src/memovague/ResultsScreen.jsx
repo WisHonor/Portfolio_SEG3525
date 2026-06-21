@@ -11,7 +11,7 @@ function fmt(t) {
 
 function ResultStat({ label, value, sub }) {
   return (
-    <div className="rounded-2xl bg-white px-4 py-5 text-center shadow-sm ring-1 ring-mv-neutral/15">
+    <div className="rounded-2xl bg-mv-surface px-4 py-5 text-center shadow-sm ring-1 ring-white/10">
       <p className="text-xs font-bold uppercase tracking-wide text-mv-neutral">{label}</p>
       <p className="mt-1 text-3xl font-extrabold tabular-nums text-mv-ink">{value}</p>
       {sub && <p className="mt-1 text-xs font-semibold text-mv-neutral">{sub}</p>}
@@ -33,7 +33,7 @@ export default function ResultsScreen({ result, level, theme, onReplay, onReconf
       </p>
 
       {isRecord && (
-        <p className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-mv-accent/10 px-3 py-1 text-sm font-bold text-mv-accent">
+        <p className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-mv-accent/15 px-3 py-1 text-sm font-bold text-mv-accent">
           ✨ Nouveau record personnel&nbsp;!
         </p>
       )}
@@ -47,14 +47,14 @@ export default function ResultsScreen({ result, level, theme, onReplay, onReconf
         <button
           type="button"
           onClick={onReplay}
-          className="rounded-2xl bg-mv-accent px-6 py-3.5 font-bold text-white shadow-lg shadow-mv-accent/30 transition hover:-translate-y-0.5 hover:bg-mv-accent-dark active:translate-y-0"
+          className="rounded-2xl bg-mv-accent px-6 py-3.5 font-extrabold text-mv-bg shadow-lg shadow-mv-accent/30 transition hover:-translate-y-0.5 hover:bg-mv-accent-dark active:translate-y-0"
         >
           Rejouer
         </button>
         <button
           type="button"
           onClick={onReconfig}
-          className="rounded-2xl border-2 border-mv-primary/30 bg-white px-6 py-3.5 font-bold text-mv-primary transition hover:border-mv-primary hover:bg-mv-primary/5"
+          className="rounded-2xl border-2 border-mv-primary/50 bg-mv-primary/10 px-6 py-3.5 font-bold text-mv-ink transition hover:border-mv-primary hover:bg-mv-primary/20"
         >
           Changer de niveau ou de thème
         </button>

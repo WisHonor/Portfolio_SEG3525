@@ -24,7 +24,7 @@ function buildDeck(theme, pairs) {
 
 function Stat({ label, value }) {
   return (
-    <div className="min-w-[62px] rounded-xl bg-white px-3 py-2 text-center shadow-sm ring-1 ring-mv-neutral/15">
+    <div className="min-w-[62px] rounded-xl bg-mv-surface px-3 py-2 text-center shadow-sm ring-1 ring-white/10">
       <p className="text-[0.62rem] font-bold uppercase tracking-wide text-mv-neutral">{label}</p>
       <p className="mt-0.5 text-lg font-extrabold leading-none tabular-nums text-mv-ink">{value}</p>
     </div>

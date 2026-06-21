@@ -39,7 +39,7 @@ mémoire humaine et propose **deux niveaux** et **quatre thèmes** configurables
 
 - **Similarité** — dos de carte identiques (`Card.jsx`) → ensemble perçu comme un tout.
 - **Proximité** — contrôles regroupés par fonction (`ConfigScreen.jsx`), HUD regroupé (`GameBoard.jsx`).
-- **Figure-fond** — dos de carte teal sur fond clair (`Card.jsx`).
+- **Figure-fond** — dos de carte sur fond navy plus sombre, liseré indigo (`Card.jsx`).
 - **Continuité** — gap uniforme + cellules carrées alignées (`GameBoard.jsx`) → grille 6 × 6 ordonnée.
 
 ---

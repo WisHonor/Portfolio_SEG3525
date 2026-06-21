@@ -57,7 +57,7 @@ export default function MemoVague() {
   return (
     <div className="min-h-screen bg-mv-bg font-poppins text-mv-ink">
       {/* Barre minimale + retour vers le portfolio (cohérent avec le reste du site) */}
-      <header className="sticky top-0 z-40 border-b border-mv-neutral/15 bg-mv-bg/85 backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-mv-bg/85 backdrop-blur">
         <div className="mx-auto flex max-w-2xl items-center justify-between px-5 py-3">
           <span className="flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-mv-primary text-sm font-black text-white">

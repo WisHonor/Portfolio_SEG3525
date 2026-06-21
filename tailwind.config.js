@@ -20,16 +20,18 @@ export default {
         ink: '#2b2b2b',
         muted: '#6b7280',
         line: '#e5e7eb',
-        // MémoVague tokens (Devoir 3) — palette Scénarimage A (calme, teal/coral).
+        // MémoVague tokens (Devoir 3) — palette Scénarimage B (sombre, navy/indigo/or).
         // Préfixe "mv-" pour ne pas entrer en collision avec les tokens existants.
-        'mv-bg': '#F4F7F6',        // fond clair du jeu
-        'mv-primary': '#0F6B66',   // teal profond — dos de carte, accents
-        'mv-primary-dark': '#0A524E',
-        'mv-accent': '#FF6B5E',    // coral — action primaire
-        'mv-accent-dark': '#F0564A',
-        'mv-success': '#3DAE6B',   // vert — feedback de paire trouvée
-        'mv-neutral': '#8E97A3',   // gris-bleu — texte secondaire / bordures
-        'mv-ink': '#15302E',       // texte foncé teal — titres, fort contraste
+        'mv-bg': '#1A1B2E',        // fond navy profond du jeu
+        'mv-surface': '#2E2F52',   // panneaux / dos de carte / boîtes de stats
+        'mv-face': '#ECECFF',      // face révélée d'une carte (claire → l'emoji ressort)
+        'mv-primary': '#6C63FF',   // indigo — sélection, bordures, « ? », progression
+        'mv-primary-dark': '#5B52E6',
+        'mv-accent': '#FFD166',    // or — action primaire
+        'mv-accent-dark': '#EEBE4D',
+        'mv-success': '#06D6A0',   // vert — feedback de paire trouvée
+        'mv-neutral': '#9B9DC9',   // gris-indigo clair — texte secondaire
+        'mv-ink': '#FFFFFF',       // texte principal clair sur fond sombre
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
