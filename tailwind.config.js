@@ -20,6 +20,16 @@ export default {
         ink: '#2b2b2b',
         muted: '#6b7280',
         line: '#e5e7eb',
+        // MémoVague tokens (Devoir 3) — palette Scénarimage A (calme, teal/coral).
+        // Préfixe "mv-" pour ne pas entrer en collision avec les tokens existants.
+        'mv-bg': '#F4F7F6',        // fond clair du jeu
+        'mv-primary': '#0F6B66',   // teal profond — dos de carte, accents
+        'mv-primary-dark': '#0A524E',
+        'mv-accent': '#FF6B5E',    // coral — action primaire
+        'mv-accent-dark': '#F0564A',
+        'mv-success': '#3DAE6B',   // vert — feedback de paire trouvée
+        'mv-neutral': '#8E97A3',   // gris-bleu — texte secondaire / bordures
+        'mv-ink': '#15302E',       // texte foncé teal — titres, fort contraste
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

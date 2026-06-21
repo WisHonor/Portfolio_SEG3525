@@ -13,11 +13,11 @@ const studies = [
   {
     id: 2,
     badge: 'Design 2',
-    title: 'Jeu de Mémoire',
-    description: 'Bientôt disponible',
+    title: 'MémoVague — Jeu de Mémoire',
+    description: 'Jeu de paires · 4×4 & 6×6',
     image: 'https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=600&h=400&fit=crop',
-    to: '/case-study/2',
-    live: false,
+    to: '/memovague',
+    live: true,
   },
   {
     id: 3,
