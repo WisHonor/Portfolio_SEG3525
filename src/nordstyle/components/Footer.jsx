@@ -12,7 +12,7 @@ export default function Footer() {
           <p className="mb-3 text-sm font-bold uppercase tracking-wide text-nord-accent">Aide</p>
           <ul className="space-y-2 text-sm text-white/80">
             <li><Link to="/nordstyle/shop" className="no-underline text-white/80 hover:text-white">Boutique</Link></li>
-            <li><a href="#guide-tailles" className="no-underline text-white/80 hover:text-white">Guide des tailles</a></li>
+            <li><a href="#guide-tailles-footer" className="no-underline text-white/80 hover:text-white">Guide des tailles</a></li>
             <li><a href="#faq" className="no-underline text-white/80 hover:text-white">FAQ</a></li>
           </ul>
         </div>
@@ -24,7 +24,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div id="guide-tailles" className="mx-auto mt-8 max-w-6xl px-5">
+      <div id="guide-tailles-footer" className="mx-auto mt-8 max-w-6xl px-5">
         <p className="text-sm font-bold uppercase tracking-wide text-nord-accent">Guide des tailles</p>
         <p className="mt-1 text-sm text-white/70">XS (34) · S (36–38) · M (40–42) · L (44–46) · XL (48–50)</p>
       </div>
