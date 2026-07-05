@@ -22,11 +22,11 @@ const studies = [
   {
     id: 3,
     badge: 'Design 3',
-    title: 'Site E-Commerce',
-    description: 'Bientôt disponible',
+    title: 'NordStyle — Site E-Commerce',
+    description: 'Vêtements d\'hiver · recherche à facettes & checkout',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-    to: '/case-study/3',
-    live: false,
+    to: '/nordstyle',
+    live: true,
   },
   {
     id: 4,

@@ -9,6 +9,7 @@ depuis la page d'accueil (section « Études de cas »).
 |--------|--------|-------|
 | Devoir 2 | **PhysioNova** — site de clinique + réservation | `/physionova` |
 | Devoir 3 | **MémoVague** — jeu de mémoire (paires) | `/memovague` |
+| Devoir 4 | **NordStyle** — site de commerce électronique (vêtements d'hiver) | `/nordstyle` |
 
 ---
 
@@ -44,6 +45,22 @@ mémoire humaine et propose **deux niveaux** et **quatre thèmes** configurables
 
 ---
 
+## NordStyle — site e-commerce (Devoir 4)
+
+Prototype haute-fidélité d'une boutique de vêtements d'hiver. Trois processus UX :
+**recherche à facettes** (5 filtres, logique AND, temps réel), **checkout multi-étapes**
+(barre de progression + validation), et **sondage post-achat**. Thème « Minimaliste
+nordique » (navy + orange). Panier persisté en `localStorage`.
+
+Structure : `src/nordstyle/` (`pages/`, `components/`, `lib/` logique testée avec Vitest,
+`data/products.json`). Accessible à `/nordstyle`.
+
+> Note : le barème du Devoir 4 suggérait GitHub Pages + gh-pages et interdisait Tailwind ;
+> ce portfolio étant déjà déployé sur Vercel avec Tailwind, NordStyle suit la même stack
+> pour rester cohérent avec les autres devoirs.
+
+---
+
 ## Lancer le projet
 
 Prérequis : **Node.js 18+** et npm.
@@ -73,4 +90,4 @@ ou **GitHub Pages**.
 
 ## Stack technique
 
-React 18 · React Router · Vite 5 · Tailwind CSS 3 · (emoji natifs — aucune dépendance d'icônes ajoutée)
+React 18 · React Router · Vite 5 · Tailwind CSS 3 · Vitest · (emoji natifs — aucune dépendance d'icônes ajoutée)
