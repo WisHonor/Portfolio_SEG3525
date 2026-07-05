@@ -27,3 +27,8 @@ export function removeFromItems(items, id, size) {
 
 export const cartCount = items => items.reduce((n, i) => n + i.qty, 0)
 export const cartSubtotal = items => items.reduce((s, i) => s + i.price * i.qty, 0)
+
+export const FREE_SHIPPING_THRESHOLD = 75
+export const SHIPPING_FEE = 9.99
+export const shippingFor = (subtotal) =>
+  subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : SHIPPING_FEE

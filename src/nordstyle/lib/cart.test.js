@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { addToItems, updateItemQty, removeFromItems, cartCount, cartSubtotal } from './cart.js'
+import { addToItems, updateItemQty, removeFromItems, cartCount, cartSubtotal, shippingFor } from './cart.js'
 
 const prod = { id: 1, name: 'Parka', price: 100, image: 'x' }
 
@@ -40,5 +40,10 @@ describe('cart', () => {
     items = addToItems(items, { id: 2, name: 'Tuque', price: 20, image: 'y' }, 'L', 1)
     expect(cartCount(items)).toBe(3)
     expect(cartSubtotal(items)).toBe(220)
+  })
+  it('is free shipping at/over the threshold, else a flat fee', () => {
+    expect(shippingFor(74.99)).toBe(9.99)
+    expect(shippingFor(75)).toBe(0)
+    expect(shippingFor(200)).toBe(0)
   })
 })

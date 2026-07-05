@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import ProgressBar from '../components/ProgressBar.jsx'
+import { lineId } from '../lib/cart.js'
 
 const STEPS = ['Panier', 'Informations', 'Paiement', 'Confirmation']
 
@@ -30,12 +31,18 @@ export default function ConfirmationPage() {
 
         <div className="mt-6 space-y-2 text-left">
           {order.items.map(i => (
-            <div key={i.id + i.size} className="flex justify-between border-b border-nord-gray py-2 text-sm">
+            <div key={lineId(i.id, i.size)} className="flex justify-between border-b border-nord-gray py-2 text-sm">
               <span className="text-nord-ink">{i.name} · {i.size} × {i.qty}</span>
               <span className="font-semibold text-nord-ink">{(i.price * i.qty).toFixed(2)} $</span>
             </div>
           ))}
-          <div className="flex justify-between pt-2 font-bold text-nord-ink">
+          <div className="mt-2 flex justify-between text-nord-muted">
+            <span>Sous-total</span><span className="font-semibold text-nord-ink">{order.subtotal.toFixed(2)} $</span>
+          </div>
+          <div className="flex justify-between text-nord-muted">
+            <span>Livraison</span><span className="font-semibold text-nord-ink">{order.shipping === 0 ? 'Gratuite' : '9,99 $'}</span>
+          </div>
+          <div className="flex justify-between border-t border-nord-gray pt-2 font-bold text-nord-ink">
             <span>Total</span><span>{order.total.toFixed(2)} $</span>
           </div>
         </div>

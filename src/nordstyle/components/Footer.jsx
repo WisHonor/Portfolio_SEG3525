@@ -24,6 +24,10 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+      <div id="guide-tailles" className="mx-auto mt-8 max-w-6xl px-5">
+        <p className="text-sm font-bold uppercase tracking-wide text-nord-accent">Guide des tailles</p>
+        <p className="mt-1 text-sm text-white/70">XS (34) · S (36–38) · M (40–42) · L (44–46) · XL (48–50)</p>
+      </div>
       <p className="mt-8 text-center text-xs text-white/50">© {new Date().getFullYear()} NordStyle · Prototype SEG3525 · Wissam Elmasry</p>
     </footer>
   )

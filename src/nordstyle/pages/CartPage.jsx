@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useCart } from '../CartContext.jsx'
-import { lineId } from '../lib/cart.js'
+import { lineId, shippingFor } from '../lib/cart.js'
 
 export default function CartPage() {
   const { items, updateQty, removeItem, subtotal } = useCart()
@@ -54,7 +54,7 @@ export default function CartPage() {
           <span>Sous-total</span><span className="font-semibold text-nord-ink">{subtotal.toFixed(2)} $</span>
         </div>
         <div className="mt-1 flex justify-between text-nord-muted">
-          <span>Livraison</span><span className="font-semibold text-nord-success">{subtotal >= 75 ? 'Gratuite' : '9,99 $'}</span>
+          <span>Livraison</span><span className="font-semibold text-nord-success">{shippingFor(subtotal) === 0 ? 'Gratuite' : '9,99 $'}</span>
         </div>
         <Link to="/nordstyle/checkout" className="mt-6 block rounded-xl bg-nord-navy px-6 py-3.5 text-center font-bold text-white no-underline hover:bg-nord-navy-soft">
           Passer à la caisse →

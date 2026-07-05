@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import ProgressBar from '../components/ProgressBar.jsx'
 import { useCart } from '../CartContext.jsx'
 import { validateInfo, validatePayment } from '../lib/validation.js'
+import { lineId, shippingFor } from '../lib/cart.js'
 
 const STEPS = ['Panier', 'Informations', 'Paiement', 'Confirmation']
 
@@ -14,7 +15,7 @@ export default function CheckoutPage() {
   const [pay, setPay] = useState({ card: '', expiry: '', cvv: '' })
   const [errors, setErrors] = useState({})
 
-  const shipping = subtotal >= 75 ? 0 : 9.99
+  const shipping = shippingFor(subtotal)
   const total = subtotal + shipping
 
   if (items.length === 0) {
@@ -47,6 +48,15 @@ export default function CheckoutPage() {
   }
   const back = () => { setErrors({}); setStep(s => Math.max(0, s - 1)) }
 
+  const updateInfo = (next) => {
+    setInfo(next)
+    if (Object.keys(errors).length) setErrors(validateInfo(next))
+  }
+  const updatePay = (next) => {
+    setPay(next)
+    if (Object.keys(errors).length) setErrors(validatePayment(next))
+  }
+
   const field = (label, value, onChange, err, placeholder) => (
     <label className="block">
       <span className="text-sm font-semibold text-nord-ink">{label}</span>
@@ -70,7 +80,7 @@ export default function CheckoutPage() {
           <p className="mt-1 text-nord-muted">Vérifiez vos articles avant de continuer.</p>
           <div className="mt-5 space-y-3">
             {items.map(i => (
-              <div key={i.id + i.size} className="flex justify-between rounded-xl border border-nord-gray bg-white p-3 text-sm">
+              <div key={lineId(i.id, i.size)} className="flex justify-between rounded-xl border border-nord-gray bg-white p-3 text-sm">
                 <span className="text-nord-ink">{i.name} · {i.size} × {i.qty}</span>
                 <span className="font-bold text-nord-ink">{(i.price * i.qty).toFixed(2)} $</span>
               </div>
@@ -86,9 +96,9 @@ export default function CheckoutPage() {
       {step === 1 && (
         <div className="space-y-4">
           <h1 className="font-playfair text-2xl font-extrabold text-nord-ink">Vos informations</h1>
-          {field('Nom complet', info.name, e => setInfo({ ...info, name: e.target.value }), errors.name, 'Jean Tremblay')}
-          {field('Courriel', info.email, e => setInfo({ ...info, email: e.target.value }), errors.email, 'jean@exemple.ca')}
-          {field('Adresse de livraison', info.address, e => setInfo({ ...info, address: e.target.value }), errors.address, '123 rue Principale, Ottawa')}
+          {field('Nom complet', info.name, e => updateInfo({ ...info, name: e.target.value }), errors.name, 'Jean Tremblay')}
+          {field('Courriel', info.email, e => updateInfo({ ...info, email: e.target.value }), errors.email, 'jean@exemple.ca')}
+          {field('Adresse de livraison', info.address, e => updateInfo({ ...info, address: e.target.value }), errors.address, '123 rue Principale, Ottawa')}
         </div>
       )}
 
@@ -98,10 +108,10 @@ export default function CheckoutPage() {
           <p className="inline-flex items-center gap-2 rounded-lg bg-nord-success/10 px-3 py-2 text-sm font-semibold text-nord-success">
             🔒 Paiement 100 % sécurisé
           </p>
-          {field('Numéro de carte', pay.card, e => setPay({ ...pay, card: e.target.value }), errors.card, '4111 1111 1111 1111')}
+          {field('Numéro de carte', pay.card, e => updatePay({ ...pay, card: e.target.value }), errors.card, '4111 1111 1111 1111')}
           <div className="grid grid-cols-2 gap-4">
-            {field('Expiration (MM/AA)', pay.expiry, e => setPay({ ...pay, expiry: e.target.value }), errors.expiry, '12/28')}
-            {field('CVV', pay.cvv, e => setPay({ ...pay, cvv: e.target.value }), errors.cvv, '123')}
+            {field('Expiration (MM/AA)', pay.expiry, e => updatePay({ ...pay, expiry: e.target.value }), errors.expiry, '12/28')}
+            {field('CVV', pay.cvv, e => updatePay({ ...pay, cvv: e.target.value }), errors.cvv, '123')}
           </div>
         </div>
       )}
