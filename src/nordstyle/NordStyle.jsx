@@ -5,6 +5,7 @@ import Footer from './components/Footer.jsx'
 import HomePage from './pages/HomePage.jsx'
 import ShopPage from './pages/ShopPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
+import CartPage from './pages/CartPage.jsx'
 
 function Placeholder({ label }) {
   return <div className="grid min-h-[50vh] place-items-center text-nord-muted">NordStyle — {label}</div>
@@ -19,7 +20,7 @@ export default function NordStyle() {
           <Route index element={<HomePage />} />
           <Route path="shop" element={<ShopPage />} />
           <Route path="product/:id" element={<ProductPage />} />
-          <Route path="cart" element={<Placeholder label="Panier" />} />
+          <Route path="cart" element={<CartPage />} />
           <Route path="checkout" element={<Placeholder label="Checkout" />} />
           <Route path="confirmation" element={<Placeholder label="Confirmation" />} />
           <Route path="survey" element={<Placeholder label="Sondage" />} />
