@@ -32,6 +32,17 @@ export default {
         'mv-success': '#06D6A0',   // vert — feedback de paire trouvée
         'mv-neutral': '#9B9DC9',   // gris-indigo clair — texte secondaire
         'mv-ink': '#FFFFFF',       // texte principal clair sur fond sombre
+        // NordStyle tokens (Devoir 4) — thème « Minimaliste nordique ».
+        // Préfixe "nord-" pour ne pas entrer en collision avec les tokens existants.
+        'nord-navy': '#1A1A2E',      // primaire — fond foncé, texte
+        'nord-navy-soft': '#252540', // surfaces foncées secondaires
+        'nord-accent': '#FF6B35',    // orange — CTA, surbrillance
+        'nord-accent-dark': '#E85826',
+        'nord-gray': '#E8E8E8',      // gris clair — bordures, fonds
+        'nord-bg': '#F5F5F7',        // fond de page clair
+        'nord-ink': '#1A1A2E',       // texte sur clair
+        'nord-muted': '#6B7280',     // texte secondaire
+        'nord-success': '#12B76A',   // vert — étape complétée, en stock
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
