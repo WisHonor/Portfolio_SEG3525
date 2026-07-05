@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import FacetPanel from '../components/FacetPanel.jsx'
 import ProductCard from '../components/ProductCard.jsx'
-import products from '../data/products.json'
+import products from '../data/products.js'
 import { getFacetOptions, filterProducts, sortProducts, countActiveFilters, FACET_CONFIG } from '../lib/facets.js'
 
 const emptyFilters = () => Object.fromEntries(FACET_CONFIG.map(f => [f.key, []]))

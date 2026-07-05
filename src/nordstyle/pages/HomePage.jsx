@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import PromoBanner from '../components/PromoBanner.jsx'
 import ProductCard from '../components/ProductCard.jsx'
-import products from '../data/products.json'
+import products from '../data/products.js'
 
 export default function HomePage() {
   const featured = [...products].sort((a, b) => b.rating - a.rating).slice(0, 4)

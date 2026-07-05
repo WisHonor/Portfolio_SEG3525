@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
-import products from '../data/products.json'
+import products from '../data/products.js'
 import { SIZE_ORDER } from '../lib/facets.js'
 import { useCart } from '../CartContext.jsx'
 
