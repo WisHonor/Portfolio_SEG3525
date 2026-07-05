@@ -43,6 +43,9 @@ export default {
         'nord-ink': '#1A1A2E',       // texte sur clair
         'nord-muted': '#6B7280',     // texte secondaire
         'nord-success': '#12B76A',   // vert — étape complétée, en stock
+        'nord-sky': '#4F8FB5',       // bleu glacier — accent secondaire hivernal
+        'nord-sky-dark': '#3E7CA8',  // survol / texte bleu sur fond clair
+        'nord-ice': '#EAF3F9',       // bleu très pâle — fonds, tuiles givrées
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

@@ -10,8 +10,8 @@ export default function HomePage() {
       <PromoBanner />
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2">
         <div>
-          <span className="inline-block rounded-full bg-nord-navy/5 px-3 py-1 text-xs font-bold uppercase tracking-wide text-nord-navy">
-            Collection Hiver 2026
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-nord-ice px-3 py-1 text-xs font-bold uppercase tracking-wide text-nord-sky-dark">
+            ❄ Collection Hiver 2026
           </span>
           <h1 className="mt-4 font-playfair text-4xl font-extrabold leading-tight text-nord-ink sm:text-5xl">
             Restez au chaud, <span className="text-nord-accent">avec style.</span>
@@ -25,7 +25,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="overflow-hidden rounded-3xl border border-nord-gray shadow-xl">
+        <div className="overflow-hidden rounded-3xl border-4 border-nord-ice shadow-xl">
           <img
             src="https://images.unsplash.com/photo-1548883354-94bcfe321cbb?w=800&h=800&fit=crop"
             alt="Collection d'hiver NordStyle"
@@ -33,7 +33,8 @@ export default function HomePage() {
           />
         </div>
       </section>
-      <section className="mx-auto max-w-6xl px-5 pb-8">
+      <section className="bg-nord-ice py-14">
+      <div className="mx-auto max-w-6xl px-5">
         <div className="mb-8 flex items-end justify-between">
           <h2 className="font-playfair text-2xl font-extrabold text-nord-ink">Les mieux notés</h2>
           <Link to="/nordstyle/shop" className="text-sm font-bold text-nord-accent no-underline hover:underline">
@@ -43,6 +44,7 @@ export default function HomePage() {
         <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
           {featured.map(p => <ProductCard key={p.id} product={p} />)}
         </div>
+      </div>
       </section>
     </>
   )
