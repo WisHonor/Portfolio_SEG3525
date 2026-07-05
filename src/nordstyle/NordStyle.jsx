@@ -7,6 +7,7 @@ import ShopPage from './pages/ShopPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
 import CartPage from './pages/CartPage.jsx'
 import CheckoutPage from './pages/CheckoutPage.jsx'
+import ConfirmationPage from './pages/ConfirmationPage.jsx'
 
 function Placeholder({ label }) {
   return <div className="grid min-h-[50vh] place-items-center text-nord-muted">NordStyle — {label}</div>
@@ -23,7 +24,7 @@ export default function NordStyle() {
           <Route path="product/:id" element={<ProductPage />} />
           <Route path="cart" element={<CartPage />} />
           <Route path="checkout" element={<CheckoutPage />} />
-          <Route path="confirmation" element={<Placeholder label="Confirmation" />} />
+          <Route path="confirmation" element={<ConfirmationPage />} />
           <Route path="survey" element={<Placeholder label="Sondage" />} />
         </Routes>
         <Footer />
