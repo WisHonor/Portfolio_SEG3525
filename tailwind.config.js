@@ -36,8 +36,8 @@ export default {
         // Préfixe "nord-" pour ne pas entrer en collision avec les tokens existants.
         'nord-navy': '#1A1A2E',      // primaire — fond foncé, texte
         'nord-navy-soft': '#252540', // surfaces foncées secondaires
-        'nord-accent': '#FF6B35',    // orange — CTA, surbrillance
-        'nord-accent-dark': '#E85826',
+        'nord-accent': '#2C7DA0',    // bleu — CTA, surbrillance (AA sur blanc)
+        'nord-accent-dark': '#1F5F7D',
         'nord-gray': '#E8E8E8',      // gris clair — bordures, fonds
         'nord-bg': '#F5F5F7',        // fond de page clair
         'nord-ink': '#1A1A2E',       // texte sur clair
