@@ -31,11 +31,11 @@ const studies = [
   {
     id: 4,
     badge: 'Design 4',
-    title: 'Analyse & Visualisation',
-    description: 'Bientôt disponible',
+    title: 'Prix des Aliments — Tableau de Bord',
+    description: 'Visualisation bilingue · Chart.js & i18n',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-    to: '/case-study/4',
-    live: false,
+    to: '/food-prices',
+    live: true,
   },
 ]
 

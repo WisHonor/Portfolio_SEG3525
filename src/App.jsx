@@ -4,6 +4,7 @@ import CaseStudy from './pages/CaseStudy'
 import PhysioNova from './physionova/PhysioNova'
 import MemoVague from './memovague/MemoVague'
 import NordStyle from './nordstyle/NordStyle'
+import FoodDashboard from './fooddashboard/FoodDashboard'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/physionova" element={<PhysioNova />} />
       <Route path="/memovague" element={<MemoVague />} />
       <Route path="/nordstyle/*" element={<NordStyle />} />
+      <Route path="/food-prices" element={<FoodDashboard />} />
     </Routes>
   )
 }

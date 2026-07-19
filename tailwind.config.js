@@ -46,6 +46,18 @@ export default {
         'nord-sky': '#4F8FB5',       // bleu glacier — accent secondaire hivernal
         'nord-sky-dark': '#3E7CA8',  // survol / texte bleu sur fond clair
         'nord-ice': '#EAF3F9',       // bleu très pâle — fonds, tuiles givrées
+        // Food Price Dashboard tokens (Devoir 5) — thème « moniteur éditorial des prix ».
+        // Préfixe "fp-". Fond papier chaud + encre + un seul accent brique.
+        'fp-bg': '#F7F6F2',          // fond papier chaud
+        'fp-surface': '#FFFFFF',     // cartes
+        'fp-ink': '#201E1B',         // texte / chrome (encre presque noire, chaude)
+        'fp-muted': '#6C6862',       // texte secondaire (AA ≥ 5:1 sur clair)
+        'fp-line': '#E8E4DD',        // filets / bordures
+        'fp-accent': '#B23A48',      // accent brique — unique touche vive (AA sur blanc)
+        'fp-accent-soft': '#F7E7E9', // fond d'accent très pâle
+        'fp-warn-bg': '#FEF6E7',     // bandeau « données synthétiques » (ambre pâle)
+        'fp-warn-border': '#F0D9A7',
+        'fp-warn-ink': '#7A5B12',    // texte du bandeau (AA sur ambre pâle)
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
