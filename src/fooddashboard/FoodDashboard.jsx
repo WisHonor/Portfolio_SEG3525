@@ -48,9 +48,7 @@ export default function FoodDashboard() {
       {/* ── En-tête ── */}
       <header className="sticky top-0 z-30 border-b border-fp-line bg-fp-surface/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5">
-          <Link to="/" className="text-sm font-semibold text-fp-muted no-underline transition hover:text-fp-ink">
-            {t.backPortfolio}
-          </Link>
+
           <LanguageToggle t={t} onToggle={() => setLang(lang === 'fr' ? 'en' : 'fr')} />
         </div>
       </header>
